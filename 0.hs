@@ -40,7 +40,7 @@ getNames = do
     return names
 
 
-fn1 names content = foldr fn0 content names
+fn1 names content = foldl fn0 content names
   where  
     fn0 :: String -> String -> String
     -- "<name>, ["
