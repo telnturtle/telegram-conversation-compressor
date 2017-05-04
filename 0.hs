@@ -40,7 +40,7 @@ getNames = do
     return names
 
 
-fn1 names content = myfn fn0 content names
+fn1 names content = foldr fn0 content names
   where  
     fn0 :: String -> String -> String
     -- "<name>, ["
@@ -60,9 +60,6 @@ mySplitOn token str = [ x |  x <- splitOn token str, x /= "" ]
 mergeListWithNewline [] = []
 mergeListWithNewline (x:[]) = x
 mergeListWithNewline (x:xs) = (x++"\n") ++ mergeListWithNewline xs
-
-myfn fn content []   = content
-myfn fn content (a:as) = myfn fn (fn content a) as
 
 deleteLastLineIfThatIsEmpty :: [String] -> [String]
 deleteLastLineIfThatIsEmpty str = if length str < 2 then str else
