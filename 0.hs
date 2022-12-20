@@ -1,13 +1,3 @@
--- 긴 텔레그램 대화를 긁어서 보관할때 부피를 줄여주는 프로그램
--- by turtle
--- 2017-02-10부터 만듦
-
--- 사용법: PC 텔레그램에서 대화를 긁어 복사해서 텍스트파일로 붙여넣는다.
--- 폴더에 두고 실행한다.
--- 대화 참여자의 인원수와 이름을 적어주면 텍스트파일 이름 뒤에 _가 붙은
--- 파일이 생긴다. 
--- 끝.
-
 import Data.List.Split -- fn: splitOn
 import Prelude hiding (getLine, readFile, writeFile)
 import System.IO
